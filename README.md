@@ -141,6 +141,7 @@ python3 -I pilot/erupt.py data/rsoph_lc.json           # compare with the RS Oph
 |---|---|
 | [AGENTS.md](AGENTS.md) | guide for AI agents working here ([CLAUDE.md](CLAUDE.md) points Claude Code to it) |
 | [notes/scouting-2026-10-19.md](notes/scouting-2026-10-19.md) | the research so far, with sources |
+| [notes/reports/](notes/reports/README.md) | the complete scouting reports, kept as written, and the fact-check |
 | [pilot/](pilot/) | the pilot scripts, the five stars and their coordinates |
 | [results/pilot-2026-10-19.txt](results/pilot-2026-10-19.txt) | pilot output, scored against the known eruptions |
 | [tests/](tests/) | tests of `erupt.py` |
