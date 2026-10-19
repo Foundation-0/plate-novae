@@ -1,0 +1,3 @@
+# plate-novae
+
+@AGENTS.md

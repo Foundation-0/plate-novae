@@ -1,0 +1,4 @@
+# DASCH light curves are fetched, not committed (see pilot/README.md)
+data/
+__pycache__/
+*.pyc

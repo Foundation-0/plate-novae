@@ -1,0 +1,193 @@
+plate-novae pilot: output of pilot/erupt.py, re-run on 19 Oct 2026
+==================================================================
+
+Light curves: DASCH DR7, fetched from the DASCH API on 19 Oct 2026 and kept outside this
+repository. pilot/README.md gives the API call for each star. Each block below is the unedited
+output of the command above it. Running the same command on a fetched light curve gives the
+same block.
+
+Columns of each group line: first and last date (decimal years), number of plates (n),
+brightest magnitude, plate series.
+
+
+Run A: quiet level = median of the star's measurements (the script's default)
+------------------------------------------------------------------------------
+
+$ python3 -I pilot/erupt.py data/tpyx_lc.json
+rows=1781 good_detections=352 upper_limits=1429
+reference (quiescent) mag = 14.43
+  1902.25-1902.46  n=16  brightest=8.60  series=['am', 'b']
+  1902.77-1902.77  n=1  brightest=12.31  series=['am']
+  1905.03-1905.03  n=1  brightest=12.23  series=['am']
+  1916.19-1916.19  n=1  brightest=11.31  series=['am']
+  1920.19-1920.46  n=25  brightest=8.55  series=['am', 'i', 'mf']
+  1936.46-1936.46  n=1  brightest=9.27  series=['am']
+  1943.42-1943.42  n=1  brightest=9.81  series=['am']
+  1944.14-1944.14  n=1  brightest=9.57  series=['am']
+  1944.87-1945.43  n=74  brightest=8.55  series=['a', 'am', 'ax', 'b', 'bi', 'i', 'mf', 'rb']
+  1945.94-1945.94  n=1  brightest=12.07  series=['ax']
+  1947.31-1947.31  n=1  brightest=12.14  series=['bi']
+
+$ python3 -I pilot/erupt.py data/usco_lc.json
+rows=2885 good_detections=37 upper_limits=2848
+reference (quiescent) mag = 15.36
+  1900.70-1900.70  n=1  brightest=12.65  series=['am']
+  1909.48-1909.48  n=1  brightest=12.34  series=['am']
+  1917.18-1917.18  n=1  brightest=8.72  series=['ac']
+  1936.48-1936.48  n=1  brightest=10.20  series=['rl']
+  1945.41-1945.43  n=4  brightest=9.36  series=['am', 'b', 'bi', 'rb']
+  1979.48-1979.48  n=1  brightest=9.90  series=['mc']
+
+$ python3 -I pilot/erupt.py data/rsoph_lc.json
+rows=3780 good_detections=2086 upper_limits=1694
+reference (quiescent) mag = 11.24
+  1898.50-1898.50  n=1  brightest=7.22  series=['i']
+  1914.21-1914.23  n=3  brightest=8.45  series=['ai']
+  1933.61-1933.71  n=13  brightest=5.57  series=['ac', 'ai', 'mc', 'rb', 'rh']
+
+$ python3 -I pilot/erupt.py data/dqher_lc.json
+rows=5514 good_detections=1044 upper_limits=4470
+reference (quiescent) mag = 11.06
+  1934.95-1936.90  n=220  brightest=6.24  series=['ac', 'ai', 'ca', 'fa', 'i', 'ir', 'ma', 'md', 'rh']
+
+$ python3 -I pilot/erupt.py data/v603aql_lc.json
+rows=5286 good_detections=3510 upper_limits=1776
+reference (quiescent) mag = 11.06
+  1915.70-1915.70  n=1  brightest=7.97  series=['ac']
+  1918.43-1918.77  n=82  brightest=5.82  series=['ac', 'ai', 'am', 'h', 'mc']
+  1919.12-1919.78  n=43  brightest=6.57  series=['ac', 'ai', 'am', 'mf']
+  1920.15-1920.87  n=37  brightest=8.54  series=['ac', 'ai', 'am']
+  1921.21-1921.36  n=3  brightest=8.96  series=['ac', 'ai']
+
+
+Run B: quiet level = the star's magnitude in DASCH's ATLAS catalogue, for T Pyx and U Sco only
+-----------------------------------------------------------------------------------------------
+
+DASCH measures these two stars mostly in eruption, so their median (14.43 and 15.36) is much
+brighter than their catalogue magnitude (15.55 for ATLAS2_388903450, 18.21 for ATLAS2_563839755).
+RS Oph, DQ Her and V603 Aql are as in Run A.
+
+$ python3 -I pilot/erupt.py data/tpyx_lc.json 15.55
+rows=1781 good_detections=352 upper_limits=1429
+reference (quiescent) mag = 15.55
+  1890.34-1890.34  n=1  brightest=13.54  series=['b']
+  1902.25-1902.46  n=16  brightest=8.60  series=['am', 'b']
+  1902.77-1902.77  n=1  brightest=12.31  series=['am']
+  1905.03-1905.03  n=1  brightest=12.23  series=['am']
+  1907.87-1907.87  n=1  brightest=13.28  series=['am']
+  1916.19-1916.19  n=1  brightest=11.31  series=['am']
+  1920.19-1920.46  n=25  brightest=8.55  series=['am', 'i', 'mf']
+  1926.12-1926.12  n=1  brightest=12.70  series=['ax']
+  1928.21-1928.21  n=1  brightest=12.81  series=['ax']
+  1936.46-1936.46  n=1  brightest=9.27  series=['am']
+  1943.42-1943.42  n=1  brightest=9.81  series=['am']
+  1944.14-1944.14  n=1  brightest=9.57  series=['am']
+  1944.87-1945.47  n=90  brightest=8.55  series=['a', 'am', 'ax', 'b', 'bi', 'i', 'mf', 'rb']
+  1945.94-1946.18  n=3  brightest=12.07  series=['ax']
+  1947.31-1947.31  n=1  brightest=12.14  series=['bi']
+  1952.30-1952.30  n=1  brightest=13.48  series=['bi']
+  1971.16-1971.16  n=1  brightest=13.13  series=['dsb']
+
+$ python3 -I pilot/erupt.py data/usco_lc.json 18.21
+rows=2885 good_detections=37 upper_limits=2848
+reference (quiescent) mag = 18.21
+  1900.70-1900.70  n=1  brightest=12.65  series=['am']
+  1909.48-1909.48  n=1  brightest=12.34  series=['am']
+  1917.18-1917.18  n=1  brightest=8.72  series=['ac']
+  1936.48-1936.55  n=6  brightest=10.20  series=['am', 'b', 'rb', 'rl']
+  1945.41-1945.51  n=14  brightest=9.36  series=['a', 'am', 'b', 'bi', 'mf', 'rb']
+  1979.48-1979.48  n=1  brightest=9.90  series=['mc']
+
+
+Scoring, done by hand on the output above (not by erupt.py)
+===========================================================
+
+A group counts as a recovered eruption when it has at least 3 plates from at least 2 plate
+series. "Single plate": the eruption shows as a group of one plate. "Missed": no group at the
+eruption.
+
+Known eruptions from 1890 to 1989, 17 in all. Years as listed by Schaefer 2010
+(arXiv:0912.4426). This list has not yet been re-checked against the paper.
+
+Star    Year  Run A                                Run B
+T Pyx   1890  missed (13.54 on 3 May 1890,         single plate (series b)
+              0.9 mag above the median)
+T Pyx   1902  recovered: 16 plates, 2 series       same
+T Pyx   1920  recovered: 25 plates, 3 series       same
+T Pyx   1944  recovered: 74 plates, 8 series       recovered: 90 plates, 8 series
+T Pyx   1967  missed: no plates 1955-1969          same
+U Sco   1906  missed: 33 plates in 1906, star      same
+              not detected on any
+U Sco   1917  single plate (series ac)             same
+U Sco   1936  single plate (series rl, 26 Jun)     recovered: 6 plates, 4 series
+                                                   (26 Jun to 21 Jul 1936)
+U Sco   1945  recovered: 4 plates, 4 series        recovered: 14 plates, 6 series
+U Sco   1969  missed: no plates 1968-1969          same
+U Sco   1979  single plate (series mc)             same
+U Sco   1987  missed: 11 plates in 1987, star      same
+              not detected on any
+RS Oph  1898  single plate (series i)              same (Run A)
+RS Oph  1933  recovered: 13 plates, 5 series       same (Run A)
+RS Oph  1958  missed: one plate in 1958 (29 Mar)   same (Run A)
+RS Oph  1967  missed: 7 plates, 4 Jun to 7 Jul,    same (Run A)
+              at 10.65 to 11.34
+RS Oph  1985  missed: first 1985 plate 26 Mar,     same (Run A)
+              at 9.78, 1.5 mag above the median
+
+Totals         Run A                        Run B
+recovered      5                            6
+single plate   4                            4
+missed         8 (4 in 1953-69)             7 (4 in 1953-69)
+
+The misses in 1953-69, when Harvard took few plates: T Pyx 1967, U Sco 1969, RS Oph 1958 and
+RS Oph 1967.
+
+The scouting report gave 6 recovered, 4 on single plates and 7 missed, 4 of them in 1953-69.
+That matches Run B. With the script's default quiet level (Run A) the numbers are 5, 4 and 8.
+
+
+False alarms
+------------
+
+Every group with plates from 2 or more series, on all five stars and in both runs, belongs to a
+known eruption or its decline:
+  T Pyx 1902, 1920, 1944-45; U Sco 1936 (Run B) and 1945; RS Oph 1933.
+  DQ Her 1934.95-1936.90: the eruption of December 1934 and its decline.
+  V603 Aql 1918.43 to 1921.36 (four groups): the eruption of June 1918 and its decline. The
+  groups fade in turn: brightest 5.82, 6.57, 8.54, 8.96.
+
+Five stars cannot measure a false-alarm rate. Groups that pass only part of the rule:
+  Single plates away from any known eruption, Run A: T Pyx 1905.03, 1916.19, 1936.46 (9.27),
+  1943.42, 1944.14; U Sco 1900.70, 1909.48; V603 Aql 1915.70 (7.97). T Pyx 1902.77, 1945.94 and
+  1947.31 come within three years after an eruption and may be late in its decline.
+  Run B adds single plates of T Pyx in 1907, 1926, 1928, 1952 and 1971, and turns T Pyx
+  1945.94 into a group of 3 plates from one series (to 1946.18).
+  One series only: RS Oph 1914.21-1914.23, 3 plates (below).
+
+
+RS Oph, 1914: the plates
+------------------------
+
+Every plate from 13 Feb to 25 May 1914 in the RS Oph light curve. "rej" is DASCH's reject_flag,
+which erupt.py uses. "mask" marks plates that the stricter quality mask of plate-eclipses
+(src/core.py) would also drop. "centre" is the star's distance from the plate centre.
+
+Date         Plate       Mag  Limit  rej  mask  centre  In Run A
+                                                 (deg)
+1914-02-13   ai12241       -   9.14    -  -          -  not detected
+1914-03-20   ai12373    8.45   9.43    0  drop    26.6  flagged
+1914-03-21   ai12382    8.64  10.04    0  -       26.1  flagged
+1914-03-25   ai12398    8.74   9.92    0  -       26.0  flagged
+1914-04-04   ac15047    9.84  10.78    5  drop    12.1  rejected
+1914-04-06   ai12430    9.64  10.05    0  drop    28.0  under 2 mag
+1914-04-06   ai12431    9.56  10.00    0  drop     9.4  under 2 mag
+1914-04-18   ai12477    9.49  10.03    1  -       26.4  rejected
+1914-04-25   ai12509       -  10.47    -  -          -  not detected
+1914-05-07   ac15164       -  10.96    -  -          -  not detected
+1914-05-11   mc5522    10.89  14.32    0  drop     1.4  -
+1914-05-24   ac15198   10.77  11.74    0  -       13.3  -
+1914-05-25   ai12576       -  10.41    -  -          -  not detected
+
+Median of all RS Oph measurements: 11.24, so the 2 mag cut is at 9.24. Star images on the ai
+plates of March and April 1914 are 0.029 to 0.036 degrees across (about 2 arcminutes, from
+DASCH's fwhm_deg).
