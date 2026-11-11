@@ -5,9 +5,10 @@
         }
     ],
     "title": "plate-novae",
-    "description": "<p>This repository searches the Harvard DASCH plates (about 1890 to 1990) for earlier eruptions of known novae, which would show that a nova is recurrent.</p><p>Status: pilot, claimed, not peer reviewed. No person outside the project has checked it.</p><p>A pilot on five stars reports, as claimed and not checked by a person, that 5 of 17 known eruptions of T Pyx, U Sco and RS Oph from 1890 to 1989 were recovered (6 of 17 with a fainter quiet level). An RS Oph signal in March 1914 is an unverified flag, not a discovery.</p><p>Directed by Ahraz Arifuddin</p><p>Researched and verified by different model families across Gemini, Claude, Grok, OpenAI, and Muse</p>",
+    "description": "<p>This repository searches the Harvard DASCH plates (about 1890 to 1990) for earlier eruptions of known novae, which would show that a nova is recurrent.</p><p>Status: pilot, claimed, not peer reviewed. No person outside the project has checked it.</p><p>A pilot on five stars reports, as claimed and not checked by a person, that 5 of 17 known eruptions of T Pyx, U Sco and RS Oph from 1890 to 1989 were recovered (6 of 17 with a fainter quiet level). An RS Oph signal in March 1914 is an unverified flag, not a discovery.</p><p>As <a href=\"https://dasch.cfa.harvard.edu/citing/\">DASCH asks</a>: This work has made use of data provided by Digital Access to a Sky Century @ Harvard (DASCH), which has been partially supported by NSF grants AST-0407380, AST-0909073, and AST-1313370. Work on DASCH Data Release 7 received support from the Smithsonian American Women's History Initiative Pool.</p><p>Raw DASCH light curves are not redistributed here and are not in the archive. The scripts fetch them.</p><p>Directed by Ahraz Arifuddin</p><p>Researched and verified by different model families across Gemini, Claude, Grok, OpenAI, and Muse</p>",
     "upload_type": "software",
     "license": "Apache-2.0",
+    "access_right": "open",
     "keywords": [
         "astronomy",
         "dasch",
