@@ -1,0 +1,27 @@
+{
+    "creators": [
+        {
+            "name": "Arifuddin, Ahraz"
+        }
+    ],
+    "title": "plate-novae",
+    "description": "<p>This repository searches the Harvard DASCH plates (about 1890 to 1990) for earlier eruptions of known novae, which would show that a nova is recurrent.</p><p>Status: pilot, claimed, not peer reviewed. No person outside the project has checked it.</p><p>A pilot on five stars reports, as claimed and not checked by a person, that 5 of 17 known eruptions of T Pyx, U Sco and RS Oph from 1890 to 1989 were recovered (6 of 17 with a fainter quiet level). An RS Oph signal in March 1914 is an unverified flag, not a discovery.</p><p>Directed by Ahraz Arifuddin</p><p>Researched and verified by different model families across Gemini, Claude, Grok, OpenAI, and Muse</p>",
+    "upload_type": "software",
+    "license": "Apache-2.0",
+    "keywords": [
+        "astronomy",
+        "dasch",
+        "foundation0",
+        "novae",
+        "photographic-plates",
+        "variable-stars"
+    ],
+    "related_identifiers": [
+        {
+            "identifier": "https://github.com/Foundation-0/plate-novae",
+            "relation": "isSupplementTo",
+            "scheme": "url",
+            "resource_type": "software"
+        }
+    ]
+}
